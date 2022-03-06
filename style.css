@@ -1,0 +1,586 @@
+/* resetear estilos por defecto*/
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: rgb(251, 251, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(251, 251, 251, 1) 0%,
+    rgba(210, 203, 242, 1) 100%
+  );
+  font-family: "Nunito", sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* */
+hr {
+  margin: 5vw;
+}
+.responsive {
+  display: none;
+}
+
+.works {
+  font-size: 2.5vw;
+  border: 2px solid black;
+  width: 20%;
+  text-align: center;
+  margin-left: 4vw;
+}
+.works:hover {
+  color: #360536;
+}
+
+.bg-img {
+  background-image: url("img/banner.png");
+  /*tamaño del banner*/
+  min-height: 300px;
+  width: 100%;
+
+  /* centrar para que quede ok */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* barra lateral, redes sociales*/
+.icon-bar {
+  position: fixed;
+  top: 61%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 2vw;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+  box-shadow: 8px 5px 5px rgb(240, 206, 206);
+}
+
+.instagram {
+  background: #eb09cd;
+  color: white;
+}
+
+.github {
+  background: #4d1a52;
+  color: white;
+}
+.linkedin {
+  background: #2405aa;
+  color: white;
+}
+/*final barra izq*/
+
+/*  estudios */
+
+.academics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 450px;
+  margin: 2vw auto;
+  border: 1px solid #f1f1f1;
+  font-size: 1.5vw;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+h4 {
+  margin: 1vw;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(238, 244, 250);
+  color: rgb(3, 3, 3);
+  transform: rotateY(180deg);
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1vw;
+  grid-row-gap: 10px;
+  max-width: 90%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.textoV {
+  text-align: center;
+  font-family: "Pacifico";
+  font-size: 2.5vw;
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(https://media.giphy.com/media/q4KDyjMkgitFnBt2k8/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  line-height: 0.75;
+  margin: 10px 0;
+
+}
+
+.imgn {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: center;
+}
+
+.img1 {
+  border: 2px solid grey;
+  margin-top: 3vw;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+/*SKILLS */
+
+/* timeline convertido en barra vertical de skills */
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* linea divisoria */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #49138f;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* contenedor general*/
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* los circulos */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  right: -25px;
+  background-color: rgb(220, 212, 243);
+  border: 4px solid #580cbb;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 1500ms infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: #810781 0 0 0 0;
+  }
+  75% {
+    box-shadow: #e0d6db00 0 0 0 30px;
+  }
+}
+
+/* ubicar contenedor izq */
+.left {
+  left: 0;
+}
+
+/* ubicar contenedor der */
+.right {
+  left: 50%;
+}
+
+/* flechita izq */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(201, 199, 199);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #580cbb;
+}
+
+/* flechita der */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(194, 191, 191);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #580cbb transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -26px;
+}
+
+/* The actual content */
+.content {
+  padding: 10px 20px;
+  background-color: rgb(209, 199, 199);
+  position: relative;
+  border-radius: 6px;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+/* slider de proyectos */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.descripcion {
+  font-size: 1.7vw;
+  background: rgb(235, 235, 238);
+  font-style: italic;
+
+}
+
+.descripcion:hover{
+  background: rgb(166, 166, 172);
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hide {
+  display: none;
+  width: 20%;
+  text-align: center;
+  margin-left: 4vw;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: rgb(12, 4, 4);
+  width: 20%;
+  text-align: center;
+  font-size: 1.5vw;
+  margin-left: 4vw;
+}
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.softSkills,
+.resume {
+  font-size: 2.5vw;
+  border: 2px solid black;
+  width: 20%;
+  text-align: center;
+  margin-left: 4vw;
+}
+.softSkillsText {
+  margin-left: 4vw;
+  font-size: 2.5vw;
+  text-align: justify;
+}
+
+.logo {
+  font-family: "Pacifico";
+  text-align: right;
+  font-size: 2.5vw;
+  animation: myAnim 5s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+    color: #49138f;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  display: inline-flex;
+  justify-content: space-around;
+  background: rgba(131, 103, 150, 0.548);
+  width: 100%;
+  font-size: 2vw;
+  text-shadow: 2px 0 28px #120a13;
+}
+
+/* barra sociales*/
+.navBar {
+  text-decoration: none;
+}
+.navBar:hover {
+  color: #000;
+  font-weight: bolder;
+}
+/* --------*/
+
+a {
+  text-decoration: none;
+  font-size: 2vw;
+  color: #000;
+}
+a:hover {
+  color: rgb(253, 247, 247);
+}
+.aboutMe {
+  margin: 5vw;
+  font-size: 1.5;
+  font-weight: bold;
+}
+
+.thanks{
+  margin: 5vw;
+  font-size: 3vw;
+
+}
+.ResponsiveTwo{
+  display: none;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+@media screen and (max-width: 600px) {
+  body {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0;
+  }
+  /* ubicacion del timeline */
+  .timeline::after {
+    left: 31px;
+  }
+
+ .ResponsiveTwo{
+   margin: auto;
+   display: inline;
+   text-align: center;
+   padding: 2vw;
+ }
+  .container {
+    width: 90%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .container::before {
+    left: 60px;
+    border: medium solid rgb(230, 211, 211);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(245, 234, 234) transparent transparent;
+  }
+
+  /* ubicar puntos  */
+  .left::after,
+  .right::after {
+    left: 45px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .icon-bar {
+    display: none;
+  }
+  .bg-img {
+    max-width: 100%;
+  margin: 0;
+  padding: 0;
+  }
+
+  .slideshow-container {
+    margin: 5vw;
+    max-width: 100%;
+  }
+  a,
+  p {
+    font-size: 3vw;
+  }
+  .softSkillsText {
+    font-size: 3vw;
+  }
+
+  .resume,
+  .softSkills,
+  .works {
+    font-size: 3vw;
+    width: 30%;
+    padding: 1vw;
+  }
+  .dot {
+    height: 1vw;
+    width: 1vw;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    right: -25px;
+    background-color: rgb(220, 212, 243);
+    border: 4px solid #580cbb;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: none;
+  }
+  .responsive {
+    font-size: 3vw;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+  .responsive:hover {
+    color: #000;
+    
+  }
+
+  .academics {
+    max-width: 100%;
+    display: flex;
+  }
+  .flip-card {
+    display: none;
+  }
+  .img1{
+    max-width:20vw;
+    height: auto;
+  }
+}
